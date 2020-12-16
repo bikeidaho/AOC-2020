@@ -30,9 +30,8 @@ for item in listofpasswords:
     print("First letter " +firstpos)
     print("Second letter " +secondpos)
 
-    if firstpos == letter or secondpos == letter:
+    if firstpos == letter and secondpos != letter:
         initialcount +=1
-        print("Possible")
-        print(initialcount)
-    else:
-        print("Not Possible")
+    elif firstpos != letter and secondpos == letter:
+        initialcount +=1        
+    print(initialcount)
